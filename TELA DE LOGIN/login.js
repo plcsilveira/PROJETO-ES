@@ -17,7 +17,7 @@ function entrar(){
     if(dadosusuario.luser == dadosusuariononistema.usersis && dadosusuario.lsenha == dadosusuariononistema.senhasis && dadosusuario.lacesso == dadosusuariononistema.acessosis){
         window.alert("Acesso permitido")
     }else{
-        window.alert("Acesso negado")
+        window.alert("Acesso negado! O usuário ou a senha está incorreto")
     }
 }
 
