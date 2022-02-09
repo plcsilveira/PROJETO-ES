@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <form>
+
+        <h1 id="titulologin">Seja bem-vindo(a)</h1> <br><br>
+
+        <div class="dados">
+            <label for="hlogin"><strong>Login: </strong></label> <input type="text" name="login" id="login">
+        </div> <br>
+
+        <div class="dados">
+            <label for="hsenha"><strong>Senha: </strong></label> <input type="password" name="senha" id="senha">
+        </div> <br><br>
+
+        <div class="radio">
+            <label for="nadm">Administrador</label> <input type="radio" name="nivelacesso" id="nadm" value="Administrador">
+            <label for="nuser">Usuário</label> <input type="radio" name="nivelacesso" id="nuser" value="Usuário">
+            <br><br>
+            <label for="nfun">Funcionário</label> <input type="radio" name="nivelacesso" id="nfun" value="Funcionário">
+            <label for="nchefe">Chefe de Setor</label> <input type="radio" name="nivelacesso" id="nchefe" value="Chefe de Setor">
+        </div> <br><br>
+
+        <button type="submit" onclick="entrar()">Entrar</button>
+
+    </form>
+
+    <script src="login.js"></script>
+</body>
+</html>
