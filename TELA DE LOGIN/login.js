@@ -6,8 +6,8 @@ let dadosusuariononistema = {
 }
 
 function entrar(){
-    let user = document.getElementById('login').value
-    let senha = document.getElementById('senha').value
+    let user = document.getElementById('inputLogin').value
+    let senha = document.getElementById('inputSenha').value
     let acesso = document.querySelector('input[name="nivelacesso"]:checked').value
     let dadosusuario = {
         luser: user,
@@ -16,8 +16,12 @@ function entrar(){
     }
     if(dadosusuario.luser == dadosusuariononistema.usersis && dadosusuario.lsenha == dadosusuariononistema.senhasis && dadosusuario.lacesso == dadosusuariononistema.acessosis){
         window.alert("Acesso permitido")
+        if(acesso == 'Funcionário'){
+            window.alert("Você está logado como "+acesso)
+            window.location.href = "telainicialfun.html"
+        }
     }else{
-        window.alert("Acesso negado! O usuário ou a senha está incorreto")
+        window.alert("Verifique seus dados e tente novamente!")
     }
 }
 
