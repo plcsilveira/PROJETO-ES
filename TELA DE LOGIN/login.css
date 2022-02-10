@@ -5,9 +5,9 @@ body{
 }
 
 form{
-    margin-top: 60px;
+    margin-top: 90px;
     position: absolute;
-    width: 400px;
+    width: 500px;
     height: 400px;
     left: 50%;
     top: 50%;
@@ -56,9 +56,8 @@ fieldset#fieldSenha{
 }
 
 fieldset#fieldRadio{
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 300px;
+    margin-left: 25px;
+    width: 450px;
     height: 65px;
     margin-top: 25px;
 }

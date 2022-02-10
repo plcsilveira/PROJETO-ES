@@ -5,14 +5,12 @@ body{
 }
 
 div#cabecalho{
-    width: 1366px;
     height: 124px;
     background: #310F69;
     align-items: center;
 }
 
 div#menu{
-    width: 1366px;
     padding: 10px;
     background: #3A89FF;
 }
@@ -56,4 +54,17 @@ input#pesquisa{
     margin-left: 420px;
     font-size: 18px;
     color: #9E9E9E;
+}
+
+div#menu-equipamentos{
+    background: #E5E5E5;
+    padding: 10px;
+}
+
+p#titulo-equipamentos{
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-weight: 500;
 }
