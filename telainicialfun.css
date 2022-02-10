@@ -1,0 +1,59 @@
+*{margin:0;padding: 0;box-sizing: border-box;}
+
+body{
+    background-color: white;
+}
+
+div#cabecalho{
+    width: 1366px;
+    height: 124px;
+    background: #310F69;
+    align-items: center;
+}
+
+div#menu{
+    width: 1366px;
+    padding: 10px;
+    background: #3A89FF;
+}
+
+h2#titulo{
+    padding: 45px;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+    
+}
+
+input#btnHome{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+input#btnCtg{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+input#btnCtt{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+input#pesquisa{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 420px;
+    font-size: 18px;
+    color: #9E9E9E;
+}
