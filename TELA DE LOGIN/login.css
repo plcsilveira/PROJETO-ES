@@ -56,8 +56,8 @@ fieldset#fieldSenha{
 }
 
 fieldset#fieldRadio{
-    margin-left: 25px;
-    width: 450px;
+    margin-left: 70px;
+    margin-right: 70px;
     height: 65px;
     margin-top: 25px;
 }
@@ -69,9 +69,30 @@ input#inputLogin, input#inputSenha{
     height: 22px;
 }
 
-input#nadm, input#nuser, input#nfum, input#nchefe{
-    margin-right: 25px;
+input#nadm{
+    margin-right: 110px;
     margin-left: 0px;
+}
+
+input#nchefe{
+    margin-right: 135px;
+    margin-left: 0px;
+}
+
+input#nfum{
+    margin-right: 0px;
+}
+
+input#nuser{
+    margin-left: 0px;
+}
+
+label#lbladm{
+    margin-left: 30px;
+}
+
+label#lblchefe{
+    margin-left: 30px;
 }
 
 div#cabecalho{
