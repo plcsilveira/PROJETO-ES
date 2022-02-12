@@ -18,7 +18,7 @@ function entrar(){
         window.alert("Acesso permitido")
         if(acesso == 'Funcionário'){
             window.alert("Você está logado como "+acesso)
-            window.location.href = "telainicialfun.html"
+            location.host ="http://127.0.0.1:5500/TELA%20DE%20LOGIN/telainicialfun.html"
         }
     }else{
         window.alert("Verifique seus dados e tente novamente!")
