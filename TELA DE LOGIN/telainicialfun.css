@@ -50,7 +50,7 @@ button#cadastrar{
 nav.menu{
     display: block;
     width: 100%;
-    height: 80px;
+    height: 75px;
     padding-top: 20px;
     padding-bottom: 20px;
     background: #3A89FF;
@@ -117,4 +117,12 @@ input#btnPesquisa:hover{
 
 table{
     background-color: white;
+    width: 600px;
+}
+
+form{
+    height: 400px;
+    width: 400px;
+    background-color: grey;
+    margin-left: 55%;
 }
