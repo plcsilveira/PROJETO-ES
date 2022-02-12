@@ -3,7 +3,7 @@
 *{ margin:0; padding:0; box-sizing:border-box; }
 
 body{
-    background-color: white;
+    background-color: #D0CCCC;
     font-family: 'Roboto', sans-serif;
     height: 150vh;
     width: 100%;
@@ -18,13 +18,34 @@ h2#titulo{
     
 }
 
+h2#subtitulo{
+    padding-top: 10px;
+}
+
 /* FORMATANDO O CABEÇALHO */
 div#cabecalho{
-    width: 1366px;
+    width: 100%;
     height: 124px;
     background: #310F69;
     align-items: center;
 }
+
+div#cabecalho2{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #000000;
+}
+
+button#cadastrar{
+    margin-left: 70%;
+    width: 140px;
+    height: 28px;
+    border: 1px solid #000000;
+    font-size: medium;
+}
+
 /* FORMATAÇÃO DO MENU */
 nav.menu{
     display: block;
@@ -92,4 +113,8 @@ input#btnPesquisa:hover{
     color: #ffffff;
     text-align: center;
     width: 100%;
+}
+
+table{
+    background-color: white;
 }

@@ -21,6 +21,7 @@ function entrar(){
         }
     }else{
         window.alert("Verifique seus dados e tente novamente!")
+        
     }
 }
 

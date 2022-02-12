@@ -23,18 +23,45 @@
                 <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
             </ul>
         </nav>
+
+        <div id="cabecalho2">
+            <h2 id="subtitulo">GERENCIAMENTO DE EQUIPAMENTOS</h2>
+            <button id="cadastrar" onclick="cadastrar()">Cadastrar</button>
+        </div>
+
     </header>
 
-      <table id="dados-equipamentos">
+      <table id="dados-equipamentos" width="50%">
 
         <th>ID</th>
         <th>NOME</th>
         <th>CATEGORIA</th>
         <th>DATA</th>
+        <th colspan="2"></th>
 
-        
+        <tr>
+            <td>000001</td>
+            <td>Impressora EPSON</td>
+            <td>Eletrônico</td>
+            <td>10-05-2022</td>
+            <td><button class="deletar" name="deletar" onclick="deletar()">X</button></td>
+            <td><button class="editar" name="editar" onclick="editar()">edit</button></td>
+        </tr>
+
+        <tr>
+            <td>000002</td>
+            <td>Notebook</td>
+            <td>Eletrônico</td>
+            <td>22-08-2021</td>
+            <td><button class="deletar" name="deletar" onclick="deletar()">X</button></td>
+            <td><button class="editar" name="editar" onclick="editar()">edit</button></td>
+        </tr>
 
       </table>
+
+      <form>
+
+      </form>
 
       <footer class="rodape">
         <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
