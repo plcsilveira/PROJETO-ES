@@ -13,16 +13,17 @@
         <div id="cabecalho">
             <h2 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h2>
         </div>
-        <div id="menu">
-            <input type="button" value="Home" id="btnHome">
-            <input type="button" value="Catálogo" id="btnCtg">
-            <input type="button" value="Contato" id="btnCtt">
-            <input type="text" name="pesquisa" id="pesquisa" value="  pesquise aqui...">
-        </div>
-        <div id="menu-equipamentos">
-            <p id="titulo-equipamentos">GERENCIAMENTO DE EQUIPAMENTOS</p>
-        </div>
-      </header>
+      
+        <nav class="menu">
+            <ul>
+                <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
+                <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
+                <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
+                <li class="menuItems"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
+            </ul>
+        </nav>
+    </header>
 
       <table id="dados-equipamentos">
 
@@ -34,6 +35,10 @@
         
 
       </table>
+
+      <footer class="rodape">
+        <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
+    </footer>
 
 </body>
 </html>
