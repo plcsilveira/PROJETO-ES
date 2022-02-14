@@ -7,6 +7,7 @@
     <title>GERENCIAMENTO DE EQUIPAMENTOS</title>
     <link rel="stylesheet" href="telainicialfun.css">
 </head>
+
 <body>
     
     <header>
@@ -19,19 +20,21 @@
                 <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
                 <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
                 <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
-                <li class="menuItems"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="search" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
                 <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
             </ul>
         </nav>
 
         <div id="cabecalho2">
             <h2 id="subtitulo">GERENCIAMENTO DE EQUIPAMENTOS</h2>
-            <!-- <button id="cadastrar" onclick="cadastrar()">Cadastrar</button> -->
         </div>
 
     </header>
 
-      <table id="dados-equipamentos">
+        <section>
+
+            <div id="tabela">
+                <table id="dados-equipamentos">
 
         <th>ID</th>
         <th>NOME</th>
@@ -58,16 +61,34 @@
         </tr>
 
       </table>
+            </div>
 
-      <form>
-          
+            <div id="formulario">
+                <form>
+        <h1 id="tituloFormFun">Cadastrar Novo Equipamento</h1>
+        <label class="labelFormFun" for="inputNome">Nome: * </label> <input class="inputFormFun" type="text" id="inputNome">
+        <label class="labelFormFun" for="inputCategoria">Categoria: * </label> <input class="inputFormFun" type="text" id="inputCategoria">
+        <label class="labelFormFun" for="inputData">Data: * </label> <input class="inputFormFun" type="text" id="inputData">
+        <label class="labelFormFun" for="inputID">ID: </label> <input class="inputFormFun" type="text" id="inputID">
+        <label class="labelFormFun" for="selectSit">Situação: </label> <select id="selectSit" class="inputFormFun"><option value="">Selecione</option><option value="Alugado">Alugado</option><option value="Disponível">Disponível</option></select>
+        <footer>
+            <div id="footerForm">
+                <button id="cancelar">Cancelar</button>
+                <button id="salvar">Salvar</button>
+            </div>
+        </footer>
       </form>
+            </div>
+            
+        </section>
+      
+      
 
       <footer class="rodape">
         <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
     </footer>
 
     <script src="sistema.js"></script>
-    
+
 </body>
 </html>
