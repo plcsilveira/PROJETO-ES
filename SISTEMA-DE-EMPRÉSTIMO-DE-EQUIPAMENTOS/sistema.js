@@ -40,13 +40,13 @@ function entrar(){
     if(login == "" || senha == ""){
         window.alert("Verifique se os campos foram preenchidos corretamente!")
     }else{
-        listaUser.forEach((item) => {
+        listaUser.forEach = function(item) {
             if(login == item.login && senha == item.senha && acesso == item.acesso){
                 validado = true
             }else{
                 validado = false
             }
-        })
+        }
         if(validado){
             window.alert("Acesso permitido")
             switch(acesso) {
