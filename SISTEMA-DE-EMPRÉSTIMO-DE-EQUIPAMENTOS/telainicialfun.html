@@ -25,13 +25,13 @@
             </ul>
         </nav>
 
-        <div id="cabecalho2">
-            <h2 id="subtitulo">GERENCIAMENTO DE EQUIPAMENTOS</h2>
-        </div>
+            <div id="cabecalho2">
+                <h2 id="subtitulo">GERENCIAMENTO DE EQUIPAMENTOS</h2>
+            </div>
 
     </header>
 
-        <section>
+        <section id="sec2">
 
             <div id="tabela">
                 <table id="dados-equipamentos">
@@ -62,9 +62,9 @@
 
                  </table>
             </div>
-
+        
             <div id="formulario">
-                <form>
+                <form id="cadastro">
                     <h1 id="tituloFormFun">Cadastrar Novo Equipamento</h1>
                     <label class="labelFormFun" for="inputNome">Nome: * </label> <input class="inputFormFun" type="text" id="inputNome">
                     <label class="labelFormFun" for="inputCategoria">Categoria: * </label> <input class="inputFormFun" type="text" id="inputCategoria">
@@ -73,8 +73,8 @@
                     <label class="labelFormFun" for="selectSit">Situação: </label> <select id="selectSit" class="inputFormFun"><option value="">Selecione</option><option value="Alugado">Alugado</option><option value="Disponível">Disponível</option></select>
                     <footer>
                         <div id="footerForm">
-                            <button id="cancelar">Cancelar</button>
-                            <button id="salvar">Salvar</button>
+                            <button id="cancelar" onclick="cancelar()">Cancelar</button>
+                            <button id="salvar" onclick="salvar()">Salvar</button>
                         </div>
                     </footer>
                 </form>
