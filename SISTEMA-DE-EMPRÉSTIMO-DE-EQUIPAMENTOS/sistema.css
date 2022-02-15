@@ -1,0 +1,84 @@
+/* FORMATANDO O TÍTULO DA PÁGINA */
+h2#titulo{
+    padding: 45px;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* FORMATANDO O CABEÇALHO */
+div#cabecalho{
+    width: 100%;
+    height: 124px;
+    background: #310F69;
+    align-items: center;
+}
+
+/* FORMATAÇÃO DO MENU */
+nav.menu{
+    display: block;
+    width: 100%;
+    height: 75px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #3A89FF;
+}
+nav.menu ul{
+    list-style: none;
+    position: absolute;
+    left: 30px;
+}
+li.menuItems{
+    display: inline-block;
+}
+
+li.menuItems a{
+    background: #ffffff;
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: solid 1px #000;
+}
+li.menuItems:hover a{
+    text-decoration: underline;
+    background-color: #DFDFDF;
+}
+
+input#pesquisa{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: 380px;
+    padding: 10px;
+    font-size: 18px;
+    color: #777777;
+    border: solid 1px #000;
+}
+input#pesquisa:hover{
+    background-color: #DFDFDF;
+}
+input#btnPesquisa{
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: bolder;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border: solid 1px #000;
+    border-radius: 10px;
+}
+input#btnPesquisa:hover{
+    text-decoration: underline;
+}
+
+.rodape{
+    margin-top: 100vh;
+    padding: 50px;
+    background-color: #0b001d;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
