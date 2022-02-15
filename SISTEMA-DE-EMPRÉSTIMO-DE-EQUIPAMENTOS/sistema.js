@@ -4,74 +4,93 @@ listaUser.push(
     {
         login: "Pedro",
         senha: "123456",
-        acesso: "Funcionário" 
+        acesso: "FUNCIONARIO"
     }
 )
 listaUser.push(
     {
         login: "Lucas",
         senha: "000123",
-        acesso: "Administrador"
+        acesso: "ADMINISTRADOR"
     }
 )
 listaUser.push(
     {
         login: "Maria",
         senha: "000456",
-        acesso: "Usuário"
+        acesso: "USUARIO"
     }
 )
 listaUser.push(
     {
         login: "Joao",
         senha: "000789",
-        acesso: "Chefe de Setor"
+        acesso: "CHEFE"
     }
 )
 
+//FUNÇÃO VALIDAÇÃO DADOS USUÁRIO
+let validado = (login, senha, acesso) => {
+    for (i = 0; i < listaUser.length; i++) {
+        if (listaUser[i].login == login && listaUser[i].senha == senha && listaUser[i].acesso == acesso) {
+            return true
+        } else if (!!(listaUser[i].login == login && listaUser[i].senha == senha && listaUser[i].acesso == acesso)) {
+            return false
+        }
+    }
+}
+
 // INICIO FUNÇÃO DO BOTÃO DO FORMULÁRIO DE LOGIN
-function entrar(){
-    let validado = true
+function entrar() {
     //VARIÁVEIS PARA ARMAZENAR INFORMAÇÕES DOS INPUT'S DA TELA DE LOGIN
     let login = document.getElementById('inputLogin').value
     let senha = document.getElementById('inputSenha').value
     let acesso = document.querySelector('input[name="nivelacesso"]:checked').value
 
     //VALIDAÇÃO CAMPO VAZIO
-    if(login == "" || senha == ""){
+    if (login == "" || senha == "") {
         window.alert("Verifique se os campos foram preenchidos corretamente!")
-    }else{
-        listaUser.forEach = function(item) {
-            if(login == item.login && senha == item.senha && acesso == item.acesso){
-                validado = true
-            }else{
-                validado = false
-            }
-        }
-        if(validado){
-            window.alert("Acesso permitido")
-            switch(acesso) {
-                case 'Funcionário':
-                    window.alert("Você está logado como "+acesso)
-                    window.location.href = "telainicialfun.html";
-                    break;
-                case 'Usuário':
-                    window.alert("Você está logado como "+acesso)
-                    window.location.href = "telainicialuser.html";
-                    break;
-                case 'Administrador':
-                    window.alert("Você está logado como "+acesso)
-                    window.location.href = "telainicialadm.html";
-                    break;
-                case 'Chefe de Setor':
-                    window.alert("Você está logado como "+acesso)
-                    window.location.href = "telainicialchefe.html";
-                    break;
-            }
-        }
-        else{
-            window.alert("Verifique suas informações e tente novamente!")
+    } else {
+        switch (acesso) {
+            case 'FUNCIONARIO':
+                if (validado(login, senha, acesso)) {
+                    alert("Acesso Permitido")
+                    window.alert("Você está logado como " + acesso)
+                    window.location.href = "telainicialfun.html"
+                } else {
+                    alert("Verifique seus dados e tente novamente!")
+                }
+                break
+
+            case 'USUARIO':
+                if (validado(login, senha, acesso)) {
+                    alert("Acesso Permitido")
+                    window.alert("Você está logado como " + acesso)
+                    window.location.href = "telainicialuser.html"
+                } else {
+                    alert("Verifique seus dados e tente novamente!")
+                }
+                break
+
+            case 'ADMINISTRADOR':
+                if (validado(login, senha, acesso)) {
+                    alert("Acesso Permitido")
+                    window.alert("Você está logado como " + acesso)
+                    window.location.href = "telainicialadm.html"
+                } else {
+                    alert("Verifique seus dados e tente novamente!")
+                }
+                break
+
+            case 'CHEFE':
+                if (validado(login, senha, acesso)) {
+                    alert("Acesso Permitido")
+                    window.alert("Você está logado como " + acesso)
+                    window.location.href = "telainicialchefe.html"
+                } else {
+                    alert("Verifique seus dados e tente novamente!")
+                }
+                break
         }
     }
-
 }// FIM FUNÇÃO DO BOTÃO DO FORMULÁRIO DE LOGIN
