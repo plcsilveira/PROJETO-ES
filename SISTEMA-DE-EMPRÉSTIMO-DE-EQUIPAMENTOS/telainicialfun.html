@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,63 +10,79 @@
 </head>
 
 <body>
-    
+
     <header>
         <div id="cabecalho">
             <h2 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h2>
         </div>
-      
+
         <nav class="menu">
             <ul>
                 <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
                 <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
                 <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
-                <li class="menuItems"><input type="search" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="search" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui...">
+                </li>
                 <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
             </ul>
         </nav>
 
-            <div id="cabecalho2">
-                <h2 id="subtitulo">GERENCIAMENTO DE EQUIPAMENTOS</h2>
-            </div>
+        <div id="cabecalho2">
+            <h2 id="subtitulo">GERENCIAMENTO DE EQUIPAMENTOS</h2>
+        </div>
 
     </header>
 
-        <section id="sec2">
+    <section id="sec2">
 
-            <div id="tabela">
-                <table id="dados-equipamentos" border="1">
+        <div id="tabela">
+            <table id="dados-equipamentos" border="1">
 
-                    <thead>
-                        <th>ID</th>
-                        <th>NOME</th>
-                        <th>CATEGORIA</th>
-                        <th>DATA</th>
-                        <th colspan="2">Ações</th>
-                    </thead>
+                <thead>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>CATEGORIA</th>
+                    <th>DATA</th>
+                    <th colspan="2">Ações</th>
+                </thead>
 
-                    <tbody id="tbody">
+                <tbody id="tbody">
 
-                    </tbody>
+                </tbody>
 
-                 </table>
-            </div>
-        
-            <div id="cadastro">
+            </table>
+        </div>
 
-                    <h1 id="tituloFormFun">Cadastrar Novo Equipamento</h1>
-                    <label class="labelFormFun" for="inputNome">Nome: * </label> <input class="inputFormFun" type="text" id="inputNome">
-                    <label class="labelFormFun" for="inputCategoria">Categoria: * </label> <input class="inputFormFun" type="text" id="inputCategoria">
-                    <label class="labelFormFun" for="inputData">Data: * </label> <input class="inputFormFun" type="text" id="inputData">
-                    <label class="labelFormFun" for="inputID">ID: </label> <input class="inputFormFun" type="text" id="inputID">
-                    <label class="labelFormFun" for="selectSit">Situação: </label> <select id="selectSit" class="inputFormFun"><option value="">Selecione</option><option value="Alugado">Alugado</option><option value="Disponível">Disponível</option></select> <br>
-                    <button id="cancelar" onclick="equipamento.cancelar()">Cancelar</button>
-                    <button id="salvar" onclick="equipamento.salvar()">Salvar</button>
+        <div id="cadastro">
 
-            </div>
-            
-        </section>
-      
+            <h1 id="tituloFormFun">Cadastrar Novo Equipamento</h1>
+
+            <label class="labelFormFun" for="inputNome">Nome: * </label>
+            <input class="inputFormFun" type="text" id="inputNome">
+
+            <label class="labelFormFun" for="inputCategoria">Categoria: * </label>
+            <input class="inputFormFun" type="text" id="inputCategoria">
+
+            <label class="labelFormFun" for="inputData">Data: * </label>
+            <input class="inputFormFun" type="text" id="inputData">
+
+            <label class="labelFormFun" for="inputID">ID: </label>
+            <input class="inputFormFun" type="text" id="inputID">
+
+            <label class="labelFormFun" for="selectSit">Situação: </label>
+            <select id="selectSit" class="inputFormFun">
+                <option disabled selected>Selecione</option>
+                <option value="Alugado">Alugado</option>
+                <option value="Disponível">Disponível</option>
+            </select> <br>
+
+            <button id="cancelar" onclick="equipamento.cancelar()">Cancelar</button>
+            <button id="salvar" onclick="equipamento.salvar()">Salvar</button>
+
+        </div>
+
+    </section>
+
     <footer class="rodape">
         <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
     </footer>
@@ -73,4 +90,5 @@
     <script src="funcionario.js"></script>
 
 </body>
+
 </html>
