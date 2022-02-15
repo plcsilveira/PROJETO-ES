@@ -34,50 +34,34 @@
         <section id="sec2">
 
             <div id="tabela">
-                <table id="dados-equipamentos">
+                <table id="dados-equipamentos" border="1">
 
-                    <th>ID</th>
-                    <th>NOME</th>
-                    <th>CATEGORIA</th>
-                    <th>DATA</th>
-                    <th colspan="2"></th>
+                    <thead>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>CATEGORIA</th>
+                        <th>DATA</th>
+                        <th colspan="2">Ações</th>
+                    </thead>
 
-                        <tr>
-                            <td>000001</td>
-                            <td>Impressora EPSON</td>
-                            <td>Eletrônico</td>
-                            <td>10-05-2022</td>
-                            <td><button class="deletar" name="deletar" onclick="deletar()">X</button></td>
-                            <td><button class="editar" name="editar" onclick="editar()">edit</button></td>
-                        </tr>
+                    <tbody id="tbody">
 
-                        <tr>
-                            <td>000002</td>
-                            <td>Notebook</td>
-                            <td>Eletrônico</td>
-                            <td>22-08-2021</td>
-                            <td><button class="deletar" name="deletar" onclick="deletar()">X</button></td>
-                            <td><button class="editar" name="editar" onclick="editar()">edit</button></td>
-                        </tr>
+                    </tbody>
 
                  </table>
             </div>
         
-            <div id="formulario">
-                <form id="cadastro">
+            <div id="cadastro">
+
                     <h1 id="tituloFormFun">Cadastrar Novo Equipamento</h1>
                     <label class="labelFormFun" for="inputNome">Nome: * </label> <input class="inputFormFun" type="text" id="inputNome">
                     <label class="labelFormFun" for="inputCategoria">Categoria: * </label> <input class="inputFormFun" type="text" id="inputCategoria">
                     <label class="labelFormFun" for="inputData">Data: * </label> <input class="inputFormFun" type="text" id="inputData">
                     <label class="labelFormFun" for="inputID">ID: </label> <input class="inputFormFun" type="text" id="inputID">
-                    <label class="labelFormFun" for="selectSit">Situação: </label> <select id="selectSit" class="inputFormFun"><option value="">Selecione</option><option value="Alugado">Alugado</option><option value="Disponível">Disponível</option></select>
-                    <footer>
-                        <div id="footerForm">
-                            <button id="cancelar" onclick="cancelar()">Cancelar</button>
-                            <button id="salvar" onclick="salvar()">Salvar</button>
-                        </div>
-                    </footer>
-                </form>
+                    <label class="labelFormFun" for="selectSit">Situação: </label> <select id="selectSit" class="inputFormFun"><option value="">Selecione</option><option value="Alugado">Alugado</option><option value="Disponível">Disponível</option></select> <br>
+                    <button id="cancelar" onclick="equipamento.cancelar()">Cancelar</button>
+                    <button id="salvar" onclick="equipamento.salvar()">Salvar</button>
+
             </div>
             
         </section>
@@ -86,7 +70,7 @@
         <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
     </footer>
 
-    <script src="sistema.js"></script>
+    <script src="funcionario.js"></script>
 
 </body>
 </html>

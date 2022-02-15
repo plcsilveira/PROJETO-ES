@@ -1,4 +1,4 @@
-//VARIAVÉIS PARA ARMAZENAR DADOS DO USUÁRIO NO SISTEMA
+//VARIAVÉIS LOGIN
 let listaUser = []
 listaUser.push(
     {
@@ -28,6 +28,7 @@ listaUser.push(
         acesso: "Chefe de Setor"
     }
 )
+
 // INICIO FUNÇÃO DO BOTÃO DO FORMULÁRIO DE LOGIN
 function entrar(){
     let validado = true
@@ -70,7 +71,6 @@ function entrar(){
         }
         else{
             window.alert("Verifique suas informações e tente novamente!")
-            window.alert("Informações: "+login+" "+senha+" "+acesso)
         }
     }
 
