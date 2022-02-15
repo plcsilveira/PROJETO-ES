@@ -3,6 +3,7 @@ class Equipamento{
     constructor(){
         this.id = 1
         this.arrayEquipamentos = []
+        this.id_atualizar = null
     }
 
     //INICIO DA FUNÇÃO SALVAR DA TELA INICIAL DO FUNCIONÁRIO
@@ -10,10 +11,27 @@ class Equipamento{
         let equipamento = {}
         equipamento = this.lerDados()
         if(this.validaCampo(equipamento)){
-            this.adicionar(equipamento)
-        }console.log(this.arrayEquipamentos)
+            if(this.id_atualizar == null){
+                this.adicionar(equipamento)
+            }else{
+                this.atualizar(this.id_atualizar, equipamento)
+            }
+        }
         this.listaTabela()
         this.cancelar()
+    }
+
+    //FUNÇÃO CANCELAR DO FORMULÁRIO DE CRIAÇÃO E EDIÇÃO DE EQUIPAMENTOS
+    cancelar() {
+        document.getElementById('inputNome').value = ''
+        document.getElementById('inputCategoria').value = ''
+        document.getElementById('inputData').value = ''
+        document.getElementById('inputID').value = ''
+
+        document.getElementById('salvar').innerText = 'Salvar'
+        document.getElementById('tituloFormFun').innerText = 'Cadastrar Novo Equipamento'
+
+        this.id_atualizar = null
     }
 
     //FUNÇÃO ADICIONAR DADOS DO EQUIPAMENTO EM UM VETOR
@@ -59,6 +77,8 @@ class Equipamento{
     //FUNÇÃO PARA INSERIR DADOS DO VETOR NA TABELA
     listaTabela(){
         let tbody = document.getElementById('tbody')
+        tbody.innerText = ''
+
         for(let i = 0; i < this.arrayEquipamentos.length; i++){
             let tr = tbody.insertRow()
             let td_id = tr.insertCell()
@@ -72,19 +92,57 @@ class Equipamento{
             td_categoria.innerText = this.arrayEquipamentos[i].categoria
             td_data.innerText = this.arrayEquipamentos[i].data
 
+            //BOTÃO EDITAR
             let imgEditar = document.createElement('img')
             imgEditar.src = 'img/editar-texto.png'
             td_acoes.appendChild(imgEditar)
+            imgEditar.setAttribute('onclick', 'equipamento.editar('+ JSON.stringify(this.arrayEquipamentos[i]) +')')
+
+            //BOTÃO EXCLUIR
             let imgExcluir = document.createElement('img')
             imgExcluir.src = 'img/deletar-lixeira.png'
             td_acoes.appendChild(imgExcluir)
+            imgExcluir.setAttribute('onclick', 'equipamento.deletar('+ this.arrayEquipamentos[i].id +')')
         }
     }
 
-    cancelar(){
-        document.getElementById('inputNome').value = ''
-        document.getElementById('inputCategoria').value = ''
-        document.getElementById('inputData').value = ''
+    //BOTÃO DELETAR LINHA NA TABELA DE EQUIPAMENTOS
+    deletar(id) {
+        let tbody = document.getElementById('tbody')
+        if (confirm("Deseja excluir o equipamento ID: " + id)) {
+            for (let i = 0; i < this.arrayEquipamentos.length; i++) {
+                if (this.arrayEquipamentos[i].id == id) {
+                    this.arrayEquipamentos.splice('i', '1')
+                    tbody.deleteRow(i)
+                }
+            }
+        }
+
+    }
+
+    //BOTÃO EDITAR EQUIPAMENTOS DA TABELA
+    editar(dados_equipamentos){
+        this.id_atualizar = dados_equipamentos.id
+
+        document.getElementById('inputNome').value = dados_equipamentos.nome
+        document.getElementById('inputCategoria').value = dados_equipamentos.categoria
+        document.getElementById('inputData').value = dados_equipamentos.data
+        document.getElementById('inputID').value = dados_equipamentos.id
+
+        document.getElementById('salvar').innerText = 'Atualizar'
+        document.getElementById('tituloFormFun').innerText = 'Editar Equipamento'
+
+    }
+
+    //METODO ATUALIZAR
+    atualizar(id, equipamento){
+        for(let i = 0; i < this.arrayEquipamentos.length; i++){
+            if(this.arrayEquipamentos[i].id == id){
+                this.arrayEquipamentos[i].nome = equipamento.nome
+                this.arrayEquipamentos[i].categoria = equipamento.categoria
+                this.arrayEquipamentos[i].data = equipamento.data
+            }
+        }
     }
 
 }
