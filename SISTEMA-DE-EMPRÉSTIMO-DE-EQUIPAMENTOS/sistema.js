@@ -34,8 +34,6 @@ let validado = (login, senha, acesso) => {
     for (i = 0; i < listaUser.length; i++) {
         if (listaUser[i].login == login && listaUser[i].senha == senha && listaUser[i].acesso == acesso) {
             return true
-        } else if (!!(listaUser[i].login == login && listaUser[i].senha == senha && listaUser[i].acesso == acesso)) {
-            return false
         }
     }
 }
