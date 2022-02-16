@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATÁLOGO | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/catalogo.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <div id="cabecalho">
+            <h1 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h1>
+        </div>
+      
+        <nav class="menu">
+            <ul>
+                <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
+                <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
+                <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
+                <li class="menuItems"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- INÍCIO -->
+
+    <section id="catalogo">
+        <h2 id="tituloCatalogo">Catálogo de Equipamentos</h1>
+        <p id="introCatalogo">Selecione um dos equipamentos abaixo e veja se ele está disponível para alocação</p>
+        <div id="descricaoEquipamento">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf84twACpq9rwhkyvu9FjhhDUCW8gOeKfFTg&usqp=CAU" id="imgEquipamento">
+            <ul id="itensDescricao">
+                <li><label>Status:</label> <p id="statusEquipamento">la</p></li>
+                <li><label>Equipamento:</label> <p id="nomeEquipamento">la</p></li>
+                <li><label>Categoria:</label> <p id="categoriaEquipamento">la</p></li>
+                <li><label>Quantidade:</label> <p id="quantidadeEquipamento">la</p></li>
+            </ul>
+            <button type="submit" id="btnAlugar">Alugar Equipamentos</button>
+        </div>
+        <div id="listaEquipamentos">
+    
+        </div>
+    </section>
+
+    <!-- FIM -->
+    <footer class="rodape">
+        <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
+    </footer>
+    
+    <script src=""></script>
+</body>
+</html>

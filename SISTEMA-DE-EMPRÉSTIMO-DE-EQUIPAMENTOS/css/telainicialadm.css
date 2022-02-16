@@ -1,0 +1,74 @@
+section#areaListas{
+    background-color: #c4c4c4;
+    width: 900px;
+    height: 270vh;
+    margin-left: 190px;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+h2{
+    background-color: #fff;
+    border-radius: 15px;
+    border: solid 1px #b3b3b3;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-left: 270px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+}
+h2#tituloEquipEmprestados{
+    margin-top: 80px;
+}
+h2#tituloSolicReserva{
+    margin-top: 130px;
+}
+h2#tituloUsuariosCadastrados{
+    margin-top: 150px;
+}
+/* LINK LISTAS - PÁGINA EXTERNA */
+iframe{
+    height: 190px;
+    border: solid 0.5px #c4c4c4;
+    border-radius: 5px;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+iframe#frameEquipamentosDisponiveis{
+    width: 510Px;
+    margin-left: 180px;
+}
+iframe#frameEquipamentosEmprestados{
+    width: 660px;
+    margin-left: 120px;
+}
+iframe#frameSolicReserva{
+    width: 630Px;
+    margin-left: 130px;
+}
+iframe#frameUsuariosAtivos{
+    width: 605Px;
+    margin-left: 130px;
+}
+
+/* BOTÃO GERAR RELATORIO */
+button{
+    position: absolute;
+    margin-left: 550px;
+    margin-top: -50px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+    background-color: #027900;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 14pt;
+}
+
+footer.rodape{
+    margin-top: 100px;
+}

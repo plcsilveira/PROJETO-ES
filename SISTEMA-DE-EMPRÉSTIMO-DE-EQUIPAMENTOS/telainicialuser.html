@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS -- USUÁRIO -- Seja Bem-Vindo(a) -- </title>
+    <title>SEJA BEM-VINDO(A) | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
+
+    <header>
+        <div id="cabecalho">
+            <h2 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h2>
+        </div>
+      
+        <nav class="menu">
+            <ul>
+                <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
+                <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
+                <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
+                <li class="menuItems"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- INÍCIO -->
+
+    <section id="usuario">
+        <h2 id="tituloEquipamentosEmprestados">Empréstimos Ativos</h2>
+        <div id="equipamentosEmprestados">
+            <p id="mostraEmprestimos"></p>
+            <div id="listaEmprestimos"></div>
+        </div>
+        
+        <h2 id="tituloReservas">Reservas</h2>
+        <div id="reservasSolicitadas">
+            <p id="mostraReservas"></p>
+            <div id="listaReservas"></div>
+        </div>
+        
+        <h2 id="tituloPendencias">Pendências</h2>
+        <div id="pendencias">
+            <p id="mostraPendencias"></p>
+            <div id="listaPendencias"></div>
+        </div>
+    </section>
+
+    <!-- FIM -->
+    <footer class="rodape">
+        <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
+    </footer>
     
+    <script src="javascript/usuario.js"></script>
 </body>
 </html>

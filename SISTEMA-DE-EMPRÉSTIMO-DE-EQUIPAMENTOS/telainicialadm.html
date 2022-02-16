@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁREA DO ADMINISTRADOR | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/telainicialadm.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <div id="cabecalho">
+            <h1 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h1>
+        </div>
+      
+        <nav class="menu">
+            <ul>
+                <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
+                <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
+                <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
+                <li class="menuItems"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- INÍCIO -->
+
+    <section id="areaListas">
+        <h2 id="tituloDescEquipamentos">Equipamentos Disponíveis</h2>
+        <div id="equipamentosDisponiveis">
+            <p id="mostraDisponiveis"></p>
+            <div id="listaDisponiveis">
+                <iframe src="tabelas.html#tabelaEquipamentos" id="frameEquipamentosDisponiveis"></iframe>
+            </div>
+        </div>
+        <h2 id="tituloEquipEmprestados">Equipamentos Emprestados</h2>
+        <div id="equipamentosEmprestados">
+            <iframe src="tabelas.html#tabelaEquipamentosEmprestados" id="frameEquipamentosEmprestados"></iframe>
+        </div>
+        <h2 id="tituloSolicReserva">Solicitação de Reserva</h2>
+        <div id="solicitacaoReserva">
+            <iframe src="tabelas.html#tabelaSolicReserva" id="frameSolicReserva"></iframe>
+        </div>
+        <h2 id="tituloUsuariosCadastrados">Usuários Cadastrados</h2>
+        <div id="usuariosCadastrados">
+            <iframe src="tabelas.html#tabelaUsuarios" id="frameUsuariosAtivos"></iframe>
+        </div>
+    </section>
+
+    <button>Gerar Relatório</button>
+
+    <!-- FIM -->
+    <footer class="rodape">
+        <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
+    </footer>
+    
+    <script src="javascript/adm.js"></script>
+</body>
+</html>
