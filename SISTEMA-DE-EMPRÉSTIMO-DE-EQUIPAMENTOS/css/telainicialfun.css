@@ -48,6 +48,11 @@ div#cadastro{
     bottom: 0.1%;
 }
 
+div#tabela{
+    height: 400px;
+    overflow: auto;
+}
+
 h1#tituloFormFun{
     padding-top: 12px;
     padding-bottom: 12px;
