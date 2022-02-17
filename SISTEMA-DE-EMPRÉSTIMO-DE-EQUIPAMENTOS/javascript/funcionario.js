@@ -164,6 +164,12 @@ class Equipamento{
         }
     }
 
+    sair() {
+        if (window.confirm("Deseja sair ?")) {
+            window.location.href = "login.html"
+        }
+    }
+
 }
 
 let equipamento = new Equipamento()

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ÁREA DO ADMINISTRADOR | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/telainicialadm.css" type="text/css">
+    <link rel="stylesheet" href="css/administrador.css" type="text/css">
 </head>
 
 <body>
@@ -14,8 +14,10 @@
     <header>
         <div id="cabecalho">
             <h1 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h1>
+            <button id="acessoLogin" onclick="sair()">Logout</button>
         </div>
-      
+        
+
         <nav class="menu">
             <ul>
                 <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
@@ -50,7 +52,7 @@
         </div>
     </section>
 
-    <button>Gerar Relatório</button>
+    <button id="geraRelatorio">Gerar Relatório</button>
 
     <!-- FIM -->
     <footer class="rodape">
@@ -59,4 +61,5 @@
     
     <script src="javascript/adm.js"></script>
 </body>
+
 </html>

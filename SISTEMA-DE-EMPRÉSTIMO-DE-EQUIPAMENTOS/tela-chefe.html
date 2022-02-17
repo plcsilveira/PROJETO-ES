@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁREA DO CHEFE DE SETOR | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/chefe.css" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <div id="cabecalho">
+            <h1 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h1>
+            <button id="acessoLogin"  onclick="sair()">Logout</button>
+        </div>
+        
+
+        <nav class="menu">
+            <ul>
+                <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
+                <li class="menuItems"><a href="#" id="btnCtg">Catálogo</a></li>
+                <li class="menuItems"><a href="#" id="btnCtt">Contato</a></li>
+                <li class="menuItems"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise aqui..."></li>
+                <li class="menuItems"><input type="button" name="btnPesquisa" value="OK" id="btnPesquisa"></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- INÍCIO -->
+
+    <section id="areaListas">
+        <h2 id="tituloDescEquipamentos">Equipamentos Ativos</h2>
+        <div id="equipamentosDisponiveis">
+            <div id="listaDisponiveis">
+                <iframe src="tabelas.html#tabelaEquipamentosAtivos" id="frameEquipamentosAtivos"></iframe>
+            </div>
+        </div>
+
+        <h2 id="tituloFuncionariosAtivos">Funcionários Ativos</h2>
+        <div id="equipamentosEmprestados">
+            <iframe src="tabelas.html#tabelaFuncionariosAtivos" id="frameFuncionariosAtivos"></iframe>
+        </div>
+        <div id="btnCadastroFuncionario">
+            <p><label for="cCadastroFuncionario">Cadastrar Funcionário</label> 
+                <button class="show-modal-func" id="cCadastroFuncionario" onclick="cadastrarFuncionarios()">+</button> 
+            </p>
+        </div>
+        <!-- CADASTRO DE NOVOS FUNCIONÁRIOS -->
+        <div class="modal-func hidden">
+            <button class="close-modal-func">&times;</button>
+            <h2 class="abaCadastro">CADASTRO DE FUNCIONÁRIOS</h2>
+            <h4>Preencha todos os campos abaixo para cadastrar o funcionário</h4>
+            <p><label for="cIdFunc">ID-Funcionário:</label> <input type="number" name="tCadastroID" id="cIdFunc" size="22" min="1"></p>
+            <p><label for="cNomeFunc">Nome Completo:</label> <input type="text" name="tCadastroNome" id="cNomeFunc"></p>
+            <p><label for="cSetor">Setor:</label> 
+                <input type="text" name="tSetor" id="cSetor" size="40" maxlength="10" placeholder="Ex.: Almoxarifado, Departamento, ..." list="tipoSetor"/>
+                <datalist id="tipoSetor">
+                    <option value="Almoxarifado"></option>
+                    <option value="Coordenação"></option>
+                    <option value="Diretoria"></option>
+                    <option value="Segurança"></option>
+                </datalist>
+            </p>
+            <p><label for="cDataAdmissao">Data de Admissão:</label> <input type="date" name="tCadastroData" id="cDataCadastro" size="20"></p>
+            <p><label for="cSalario">Salário:</label> <input type="number" name="tSalario" id="cSalario" size="20" min="1100" max="20000" size="50"></p><br/>
+            <button class="btnSalvar" onclick="salvarDados()"> 💾 Salvar </button>
+            <button class="btnCancelar" onclick="closeModalFunc()"> ❌ Cancelar </button>
+        </div>
+        <div class="overlay hidden"></div>
+
+
+        <h2 id="tituloUsuariosCadastrados">Usuários Cadastrados</h2>
+        <div id="usuariosCadastrados">
+            <iframe src="tabelas.html#tabelaUsuariosAtivos" id="frameUsuariosAtivos"></iframe>
+        </div>
+        <div id="btnCadastroUsuario">
+            <p><label for="cCadastroUsuario">Cadastrar Usuário</label> 
+                <button class="show-modal-user" id="cCadastroUsuario" onclick="cadastrarUsuarios()">+</button> 
+            </p>
+        </div>
+        <!-- CADASTRO DE NOVOS USUÁRIOS -->
+        <div class="modal-user hidden">
+            <button class="close-modal-user">&times;</button>
+            <h2 class="abaCadastro">CADASTRO DE USUÁRIOS</h2>
+            <p>Preencha todos os campos abaixo para cadastrar o usuário</p>
+            <p><label for="cIdUsuario">ID-Usuário:</label> <input type="number" name="tCadastroID" id="cIdUsuario" size="20" min="1"></p>
+            <p><label for="cNomeUsuario">Nome Completo:</label> <input type="text" name="tCadastroNome" id="cNomeUsuario"></p>
+            <p><label for="cTipoUsuario">Tipo de Usuário:</label> 
+                <input type="text" name="tTipoUsuario" id="cTipoUsuario" size="20" maxlength="10" placeholder="Ex.: Aluno/Professor" list="tipoUsuario"/>
+                <datalist id="tipoUsuario">
+                    <option value="Aluno"></option>
+                    <option value="Professor"></option>
+                </datalist>
+            </p>
+            <p><label for="cDataCadastro">Data de Cadastro:</label> <input type="date" name="tCadastroData" id="cDataCadastro"></p>
+            <p><label for="cPendenciasUsuario">Pendências:</label> <input type="number" name="tCadastroPendencias" id="cPendenciasUsuario" size="20" min="0"></p><br/>
+            <button class="btnSalvar" onclick="salvarDados()"> 💾 Salvar </button>
+            <button class="btnCancelar" onclick="sairModal()"> ❌ Cancelar </button>
+        </div>
+        <div class="overlay hidden"></div>
+    </section>
+
+    <!-- FIM -->
+    <footer class="rodape">
+        <p>&copy; Desenvolvido por Lucas Barros e Pedro Silveira</p>
+    </footer>
+    
+    <script src="javascript/chefe.js"></script>
+</body>
+
+</html>

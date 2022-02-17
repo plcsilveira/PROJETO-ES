@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEJA BEM-VINDO(A) | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</title>
+    <title>SEJA BEM-VINDO(A) | SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS | AREA DO USUARIO</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/usuario.css">
 </head>
 
 <body>
 
     <header>
         <div id="cabecalho">
-            <h2 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h2>
+            <h1 id="titulo">SISTEMA DE EMPRÉSTIMO DE EQUIPAMENTOS</h1>
+            <button id="acessoLogin"  onclick="sair()">Logout</button>
         </div>
-      
+        
+
         <nav class="menu">
             <ul>
                 <li class="menuItems"><a href="#" id="btnHome">Home</a></li>
@@ -30,21 +33,21 @@
     <section id="usuario">
         <h2 id="tituloEquipamentosEmprestados">Empréstimos Ativos</h2>
         <div id="equipamentosEmprestados">
-            <p id="mostraEmprestimos"></p>
-            <div id="listaEmprestimos"></div>
+            <iframe src="tabelas.html#tabelaEquipamentosAtivos" id="frameEquipamentosAtivos"></iframe>
         </div>
         
         <h2 id="tituloReservas">Reservas</h2>
         <div id="reservasSolicitadas">
-            <p id="mostraReservas"></p>
-            <div id="listaReservas"></div>
+            <iframe src="tabelas.html#tabelaReservas" id="frameReservas"></iframe>
         </div>
         
         <h2 id="tituloPendencias">Pendências</h2>
         <div id="pendencias">
-            <p id="mostraPendencias"></p>
-            <div id="listaPendencias"></div>
+            <iframe src="tabelas.html#tabelaMultas" id="framePendencias"></iframe>
         </div>
+        <p id="observacao">
+            OBSERVAÇÂO: Os equipamentos solicitados possuem período de empréstimo de, no máximo, 15 dias após aprovada a solicitação. Caso a devolução seja feita fora do período delimitado, será cobrada uma multa no valor de $ 5.00 por dia de atraso.
+        </p>
     </section>
 
     <!-- FIM -->

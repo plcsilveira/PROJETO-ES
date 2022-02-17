@@ -54,7 +54,7 @@ function entrar() {
                 if (validado(login, senha, acesso)) {
                     alert("Acesso Permitido")
                     window.alert("Você está logado como " + acesso)
-                    window.location.href = "telainicialfun.html"
+                    window.location.href = "tela-func.html"
                 } else {
                     alert("Verifique seus dados e tente novamente!")
                 }
@@ -64,7 +64,7 @@ function entrar() {
                 if (validado(login, senha, acesso)) {
                     alert("Acesso Permitido")
                     window.alert("Você está logado como " + acesso)
-                    window.location.href = "telainicialuser.html"
+                    window.location.href = "tela-usuario.html"
                 } else {
                     alert("Verifique seus dados e tente novamente!")
                 }
@@ -74,7 +74,7 @@ function entrar() {
                 if (validado(login, senha, acesso)) {
                     alert("Acesso Permitido")
                     window.alert("Você está logado como " + acesso)
-                    window.location.href = "telainicialadm.html"
+                    window.location.href = "tela-adm.html"
                 } else {
                     alert("Verifique seus dados e tente novamente!")
                 }
@@ -84,7 +84,7 @@ function entrar() {
                 if (validado(login, senha, acesso)) {
                     alert("Acesso Permitido")
                     window.alert("Você está logado como " + acesso)
-                    window.location.href = "telainicialchefe.html"
+                    window.location.href = "tela-chefe.html"
                 } else {
                     alert("Verifique seus dados e tente novamente!")
                 }

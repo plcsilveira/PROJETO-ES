@@ -36,6 +36,23 @@ nav.menu ul{
     position: absolute;
     left: 30px;
 }
+/* BOTÃO LOGIN */
+#acessoLogin{
+    position: absolute;
+    background: #ffffff;
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    margin-top: -85px;
+    margin-left: 90%;
+    border: solid 1px #000;
+}
+#acessoLogin:hover{
+    text-decoration: underline;
+}
+
 li.menuItems{
     display: inline-block;
 }

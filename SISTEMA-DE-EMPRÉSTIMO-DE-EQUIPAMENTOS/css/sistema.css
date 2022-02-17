@@ -82,3 +82,15 @@ input#btnPesquisa:hover{
     text-align: center;
     width: 100%;
 }
+#acessoLogin{
+    position: absolute;
+    background: #ffffff;
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    margin-top: -85px;
+    margin-left: 90%;
+    border: solid 1px #000;
+}
