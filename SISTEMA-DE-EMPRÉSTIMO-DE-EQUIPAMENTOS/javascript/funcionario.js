@@ -166,7 +166,7 @@ class Equipamento{
 
     sair() {
         if (window.confirm("Deseja sair ?")) {
-            window.location.href = "login.html"
+            window.location.href = "index.html"
         }
     }
 
