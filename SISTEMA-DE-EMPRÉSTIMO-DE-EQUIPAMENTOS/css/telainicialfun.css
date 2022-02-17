@@ -23,8 +23,7 @@ div#cabecalho2{
 
 table{
     background-color: #E5E5E5;
-    margin-left: 35%;
-    width: 877px;
+    width: 600px;
     border-collapse: collapse;
     border: 1px solid black;
 }
@@ -45,12 +44,17 @@ div#cadastro{
     width: 35%;
     background-color: #D0CCCC;
     border: 1px solid #000000;
-    bottom: 0.1%;
+    top: 310px;
+    margin-left: 149px;
 }
 
 div#tabela{
+    width: 600px;
     height: 400px;
     overflow: auto;
+    margin-top: 61px;
+    border: 1px solid #000000;
+    margin-left: 620px;
 }
 
 h1#tituloFormFun{

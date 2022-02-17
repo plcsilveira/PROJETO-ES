@@ -2,7 +2,26 @@ class Equipamento{
 
     constructor(){
         this.id = 1
-        this.arrayEquipamentos = []
+        this.arrayEquipamentos = [
+            {
+                nome: "Notebook",
+                categoria: "Eletrônico",
+                data: "01-01-2018",
+                id: this.id++
+            },
+            {
+                nome: "CABO HDMI",
+                categoria: "Eletrônico",
+                data: "01-05-2019",
+                id: this.id++
+            },
+            {
+                nome: "Projetor",
+                categoria: "Eletrônico",
+                data: "05-08-2020",
+                id: this.id++
+            }
+        ]
         this.id_atualizar = null
     }
 
